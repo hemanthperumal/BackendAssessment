@@ -1,0 +1,609 @@
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20260706052007_Migrations'.
+Applying migration '20260706052007_Migrations'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "orders" (
+          "OrderId" INTEGER NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY AUTOINCREMENT,
+          "Productid" TEXT NOT NULL,
+          "Customerid" TEXT NOT NULL,
+          "ProductName" TEXT NULL,
+          "Category" TEXT NULL,
+          "Region" TEXT NULL,
+          "SalesDate" TEXT NULL,
+          "Quantity" INTEGER NOT NULL,
+          "UnitPrice" TEXT NOT NULL,
+          "Discount" TEXT NOT NULL,
+          "ShippingCost" TEXT NOT NULL,
+          "PaymentMethod" TEXT NULL,
+          "CustomerName" TEXT NULL,
+          "CustomerMail" TEXT NULL,
+          "CustomerAddress" TEXT NULL
+      );
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+      VALUES ('20260706052007_Migrations', '8.0.26');
+Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20260706052007_Migrations', '8.0.26');
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: __EFMigrationsHistory'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabaseImpl(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+SQLite Error 1: 'no such table: __EFMigrationsHistory'.
+
+C:\BackendAssessment>
+
+C:\BackendAssessment>dotnet ef database update
+Build started...
+Build succeeded.
+The Entity Framework tools version '8.0.25' is older than that of the runtime '8.0.26'. Update the tools for the latest features and bug fixes. See https://aka.ms/AAc1fbw for more information.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20260706052007_Migrations'.
+Applying migration '20260706052007_Migrations'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "orders" (
+          "OrderId" INTEGER NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY AUTOINCREMENT,
+          "Productid" TEXT NOT NULL,
+          "Customerid" TEXT NOT NULL,
+          "ProductName" TEXT NULL,
+          "Category" TEXT NULL,
+          "Region" TEXT NULL,
+          "SalesDate" TEXT NULL,
+          "Quantity" INTEGER NOT NULL,
+          "UnitPrice" TEXT NOT NULL,
+          "Discount" TEXT NOT NULL,
+          "ShippingCost" TEXT NOT NULL,
+          "PaymentMethod" TEXT NULL,
+          "CustomerName" TEXT NULL,
+          "CustomerMail" TEXT NULL,
+          "CustomerAddress" TEXT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "OrderId" INTEGER NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY AUTOINCREMENT,
+          "Productid" TEXT NOT NULL,
+          "Customerid" TEXT NOT NULL,
+          "ProductName" TEXT NULL,
+          "Category" TEXT NULL,
+          "Region" TEXT NULL,
+          "SalesDate" TEXT NULL,
+          "Quantity" INTEGER NOT NULL,
+          "UnitPrice" TEXT NOT NULL,
+          "Discount" TEXT NOT NULL,
+          "ShippingCost" TEXT NOT NULL,
+          "PaymentMethod" TEXT NULL,
+          "CustomerName" TEXT NULL,
+          "CustomerMail" TEXT NULL,
+          "CustomerAddress" TEXT NULL
+      );
+Failed executing DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20260706052007_Migrations', '8.0.26');fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+      VALUES ('20260706052007_Migrations', '8.0.26');
+
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'table __EFMigrationsHistory has no column named MigrationId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabaseImpl(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+SQLite Error 1: 'table __EFMigrationsHistory has no column named MigrationId'.
+
+C:\BackendAssessment>dotnet ef database update
+Build started...
+Build failed. Use dotnet build to see the errors.
+
+C:\BackendAssessment>dotnet build             
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+C:\BackendAssessment\Models\Orders.cs(15,23): warning CS8618: Non-nullable property 'Productid' must contain a non-null value when exi
+ting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\BackendAssessment\BackendAssessme
+nt.csproj]
+C:\BackendAssessment\Models\Orders.cs(17,23): warning CS8618: Non-nullable property 'Customerid' must contain a non-null value when ex
+iting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\BackendAssessment\BackendAssessm
+ent.csproj]
+C:\BackendAssessment\Migrations\20260706052007_Migrations.cs(63,58): error CS1061: '<anonymous type: OperationBuilder<AddColumnOperati
+on> MigrationId, OperationBuilder<AddColumnOperation> Productid, OperationBuilder<AddColumnOperation> Customerid, OperationBuilder<Add
+ColumnOperation> ProductName, OperationBuilder<AddColumnOperation> Category, OperationBuilder<AddColumnOperation> Region, OperationBui
+lder<AddColumnOperation> SalesDate, OperationBuilder<AddColumnOperation> Quantity, OperationBuilder<AddColumnOperation> UnitPrice, Ope
+rationBuilder<AddColumnOperation> Discount, OperationBuilder<AddColumnOperation> ShippingCost, OperationBuilder<AddColumnOperation> Pa
+ymentMethod, OperationBuilder<AddColumnOperation> CustomerName, OperationBuilder<AddColumnOperation> CustomerMail, OperationBuilder<Ad
+dColumnOperation> CustomerAddress>' does not contain a definition for 'OrderId' and no accessible extension method 'OrderId' accepting
+ a first argument of type '<anonymous type: OperationBuilder<AddColumnOperation> MigrationId, OperationBuilder<AddColumnOperation> Pro
+ductid, OperationBuilder<AddColumnOperation> Customerid, OperationBuilder<AddColumnOperation> ProductName, OperationBuilder<AddColumnO
+peration> Category, OperationBuilder<AddColumnOperation> Region, OperationBuilder<AddColumnOperation> SalesDate, OperationBuilder<AddC
+olumnOperation> Quantity, OperationBuilder<AddColumnOperation> UnitPrice, OperationBuilder<AddColumnOperation> Discount, OperationBuil
+der<AddColumnOperation> ShippingCost, OperationBuilder<AddColumnOperation> PaymentMethod, OperationBuilder<AddColumnOperation> Custome
+rName, OperationBuilder<AddColumnOperation> CustomerMail, OperationBuilder<AddColumnOperation> CustomerAddress>' could be found (are y
+ou missing a using directive or an assembly reference?) [C:\BackendAssessment\BackendAssessment.csproj]
+
+Build FAILED.
+
+C:\BackendAssessment\Models\Orders.cs(15,23): warning CS8618: Non-nullable property 'Productid' must contain a non-null value when exi
+ting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\BackendAssessment\BackendAssessme
+nt.csproj]
+C:\BackendAssessment\Models\Orders.cs(17,23): warning CS8618: Non-nullable property 'Customerid' must contain a non-null value when ex
+iting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\BackendAssessment\BackendAssessm
+ent.csproj]
+C:\BackendAssessment\Migrations\20260706052007_Migrations.cs(63,58): error CS1061: '<anonymous type: OperationBuilder<AddColumnOperati
+on> MigrationId, OperationBuilder<AddColumnOperation> Productid, OperationBuilder<AddColumnOperation> Customerid, OperationBuilder<Add
+ColumnOperation> ProductName, OperationBuilder<AddColumnOperation> Category, OperationBuilder<AddColumnOperation> Region, OperationBui
+lder<AddColumnOperation> SalesDate, OperationBuilder<AddColumnOperation> Quantity, OperationBuilder<AddColumnOperation> UnitPrice, Ope
+rationBuilder<AddColumnOperation> Discount, OperationBuilder<AddColumnOperation> ShippingCost, OperationBuilder<AddColumnOperation> Pa
+ymentMethod, OperationBuilder<AddColumnOperation> CustomerName, OperationBuilder<AddColumnOperation> CustomerMail, OperationBuilder<Ad
+dColumnOperation> CustomerAddress>' does not contain a definition for 'OrderId' and no accessible extension method 'OrderId' accepting
+ a first argument of type '<anonymous type: OperationBuilder<AddColumnOperation> MigrationId, OperationBuilder<AddColumnOperation> Pro
+ductid, OperationBuilder<AddColumnOperation> Customerid, OperationBuilder<AddColumnOperation> ProductName, OperationBuilder<AddColumnO
+peration> Category, OperationBuilder<AddColumnOperation> Region, OperationBuilder<AddColumnOperation> SalesDate, OperationBuilder<AddC
+olumnOperation> Quantity, OperationBuilder<AddColumnOperation> UnitPrice, OperationBuilder<AddColumnOperation> Discount, OperationBuil
+der<AddColumnOperation> ShippingCost, OperationBuilder<AddColumnOperation> PaymentMethod, OperationBuilder<AddColumnOperation> Custome
+rName, OperationBuilder<AddColumnOperation> CustomerMail, OperationBuilder<AddColumnOperation> CustomerAddress>' could be found (are y
+ou missing a using directive or an assembly reference?) [C:\BackendAssessment\BackendAssessment.csproj]
+    2 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:02.03
+
+C:\BackendAssessment>dotnet ef database update
+Build started...
+Build succeeded.
+The Entity Framework tools version '8.0.25' is older than that of the runtime '8.0.26'. Update the tools for the latest features and bug fixes. See https://aka.ms/AAc1fbw for more information.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20260706052007_Migrations'.
+Applying migration '20260706052007_Migrations'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "orders" (
+          "OrderId" INTEGER NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY AUTOINCREMENT,
+          "Productid" TEXT NOT NULL,
+          "Customerid" TEXT NOT NULL,
+          "ProductName" TEXT NULL,
+          "Category" TEXT NULL,
+          "Region" TEXT NULL,
+          "SalesDate" TEXT NULL,
+          "Quantity" INTEGER NOT NULL,
+          "UnitPrice" TEXT NOT NULL,
+          "Discount" TEXT NOT NULL,
+          "ShippingCost" TEXT NOT NULL,
+          "PaymentMethod" TEXT NULL,
+          "CustomerName" TEXT NULL,
+          "CustomerMail" TEXT NULL,
+          "CustomerAddress" TEXT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" INTEGER NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY AUTOINCREMENT,
+          "Productid" TEXT NOT NULL,
+          "Customerid" TEXT NOT NULL,
+          "ProductName" TEXT NULL,
+          "Category" TEXT NULL,
+          "Region" TEXT NULL,
+          "SalesDate" TEXT NULL,
+          "Quantity" INTEGER NOT NULL,
+          "UnitPrice" TEXT NOT NULL,
+          "Discount" TEXT NOT NULL,
+          "ShippingCost" TEXT NOT NULL,
+          "PaymentMethod" TEXT NULL,
+          "CustomerName" TEXT NULL,
+          "CustomerMail" TEXT NULL,
+          "CustomerAddress" TEXT NULL
+      );
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+      VALUES ('20260706052007_Migrations', '8.0.26');
+Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20260706052007_Migrations', '8.0.26');
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'table __EFMigrationsHistory has no column named ProductVersion'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabaseImpl(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+SQLite Error 1: 'table __EFMigrationsHistory has no column named ProductVersion'.
+
+C:\BackendAssessment>dotnet ef database update
+Build started...
+Build succeeded.
+The Entity Framework tools version '8.0.25' is older than that of the runtime '8.0.26'. Update the tools for the latest features and bug fixes. See https://aka.ms/AAc1fbw for more information.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20260706052007_Migrations'.
+Applying migration '20260706052007_Migrations'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "orders" (
+          "OrderId" INTEGER NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY AUTOINCREMENT,
+          "Productid" TEXT NOT NULL,
+          "Customerid" TEXT NOT NULL,
+          "ProductName" TEXT NULL,
+          "Category" TEXT NULL,
+          "Region" TEXT NULL,
+          "SalesDate" TEXT NULL,
+          "Quantity" INTEGER NOT NULL,
+          "UnitPrice" TEXT NOT NULL,
+          "Discount" TEXT NOT NULL,
+          "ShippingCost" TEXT NOT NULL,
+          "PaymentMethod" TEXT NULL,
+          "CustomerName" TEXT NULL,
+          "CustomerMail" TEXT NULL,
+          "CustomerAddress" TEXT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" INTEGER NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY AUTOINCREMENT,
+          "Productid" TEXT NOT NULL,
+          "Customerid" TEXT NOT NULL,
+          "ProductVersion" TEXT NULL,
+          "Category" TEXT NULL,
+          "Region" TEXT NULL,
+          "SalesDate" TEXT NULL,
+          "Quantity" INTEGER NOT NULL,
+          "UnitPrice" TEXT NOT NULL,
+          "Discount" TEXT NOT NULL,
+          "ShippingCost" TEXT NOT NULL,
+          "PaymentMethod" TEXT NULL,
+          "CustomerName" TEXT NULL,
+          "CustomerMail" TEXT NULL,
+          "CustomerAddress" TEXT NULL
+      );
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+      VALUES ('20260706052007_Migrations', '8.0.26');
+Failed executing DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20260706052007_Migrations', '8.0.26');
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 20: 'datatype mismatch'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabaseImpl(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+SQLite Error 20: 'datatype mismatch'.
+
+C:\BackendAssessment>dotnet ef database update
+Build started...
+Build succeeded.
+The Entity Framework tools version '8.0.25' is older than that of the runtime '8.0.26'. Update the tools for the latest features and bug fixes. See https://aka.ms/AAc1fbw for more information.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20260706052007_Migrations'.
+Applying migration '20260706052007_Migrations'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "orders" (
+          "OrderId" INTEGER NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY AUTOINCREMENT,
+          "Productid" TEXT NOT NULL,
+          "Customerid" TEXT NOT NULL,
+          "ProductName" TEXT NULL,
+          "Category" TEXT NULL,
+          "Region" TEXT NULL,
+          "SalesDate" TEXT NULL,
+          "Quantity" INTEGER NOT NULL,
+          "UnitPrice" TEXT NOT NULL,
+          "Discount" TEXT NOT NULL,
+          "ShippingCost" TEXT NOT NULL,
+          "PaymentMethod" TEXT NULL,
+          "CustomerName" TEXT NULL,
+          "CustomerMail" TEXT NULL,
+          "CustomerAddress" TEXT NULL
+      );
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY AUTOINCREMENT,
+          "ProductVersion" TEXT NULL
+      );
+Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY AUTOINCREMENT,
+    "ProductVersion" TEXT NULL
+);
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'AUTOINCREMENT is only allowed on an INTEGER PRIMARY KEY'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabaseImpl(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+SQLite Error 1: 'AUTOINCREMENT is only allowed on an INTEGER PRIMARY KEY'.
+
+C:\BackendAssessment>dotnet ef database update
+Build started...
+Build succeeded.
+The Entity Framework tools version '8.0.25' is older than that of the runtime '8.0.26'. Update the tools for the latest features and bug fixes. See https://aka.ms/AAc1fbw for more information.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20260706052007_Migrations'.
+Applying migration '20260706052007_Migrations'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "orders" (
+          "OrderId" INTEGER NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY AUTOINCREMENT,
+          "Productid" TEXT NOT NULL,
+          "Customerid" TEXT NOT NULL,
+          "ProductName" TEXT NULL,
+          "Category" TEXT NULL,
+          "Region" TEXT NULL,
+          "SalesDate" TEXT NULL,
+          "Quantity" INTEGER NOT NULL,
+          "UnitPrice" TEXT NOT NULL,
+          "Discount" TEXT NOT NULL,
+          "ShippingCost" TEXT NOT NULL,
+          "PaymentMethod" TEXT NULL,
+          "CustomerName" TEXT NULL,
+          "CustomerMail" TEXT NULL,
+          "CustomerAddress" TEXT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY,
+          "ProductVersion" TEXT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+      VALUES ('20260706052007_Migrations', '8.0.26');
+Done.
+
+C:\BackendAssessment>dotnet run               
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5055
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\BackendAssessment
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (21ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 2), @p2='?' (Size = 10), @p3='?' (Size = 25), @p4='?' (Size = 9), @p5='?' (Size = 4), @p6='?' (DbType = Decimal), @p7='?' (Size = 11), @p8='?' (Size = 7), @p9='?' (Size = 4), @p10='?' (DbType = Int32), @p11='?' (Size = 5), @p12='?' (DbType = DateTime), @p13='?' (DbType = Decimal), @p14='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "orders" ("OrderId", "Category", "CustomerAddress", "CustomerMail", "CustomerName", "Customerid", "Discount", "PaymentMethod", "ProductName", "Productid", "Quantity", "Region", "SalesDate", "ShippingCost", "UnitPrice")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+fail: Microsoft.EntityFrameworkCore.Update[10000]
+      An exception occurred in the database while saving changes for context type 'BackendAssessment.ConnectionProvider.ApplicationConnection'.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: orders'.
+         at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+         at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+         at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: orders'.
+         at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+         at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+         at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+fail: BackendAssessment.Controllers.OrderController[0]
+      Error occurred while saving orders.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: orders'.
+         at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+         at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+         at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at BackendAssessment.Controllers.OrderController.BatchPostOrders(List`1 orders) in C:\BackendAssessment\Controllers\OrderController.cs:line 32
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+
+C:\BackendAssessment>dotnet ef database update
+Build started...
+Build succeeded.
+The Entity Framework tools version '8.0.25' is older than that of the runtime '8.0.26'. Update the tools for the latest features and bug fixes. See https://aka.ms/AAc1fbw for more information.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20260706052007_Migrations'.
+Applying migration '20260706052007_Migrations'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "orders" (
+          "OrderId" INTEGER NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY AUTOINCREMENT,
+          "Productid" TEXT NOT NULL,
+          "Customerid" TEXT NOT NULL,
+          "ProductName" TEXT NULL,
+          "Category" TEXT NULL,
+          "Region" TEXT NULL,
+          "SalesDate" TEXT NULL,
+          "Quantity" INTEGER NOT NULL,
+          "UnitPrice" TEXT NOT NULL,
+          "Discount" TEXT NOT NULL,
+          "ShippingCost" TEXT NOT NULL,
+          "PaymentMethod" TEXT NULL,
+          "CustomerName" TEXT NULL,
+          "CustomerMail" TEXT NULL,
+          "CustomerAddress" TEXT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK_orders" PRIMARY KEY,
+          "ProductVersion" TEXT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+      VALUES ('20260706052007_Migrations', '8.0.26');
+Done.

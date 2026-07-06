@@ -1,0 +1,25 @@
+Initialize and create the database with the given tables.
+
+1) Initilize DBContext with sql lite
+2) Create Orders Table and sync with database
+3) Create Batch input into Orders table
+4) So there are 4 Apis (BatchPostOrders, TotalNumberOfCustomers, TotalNumberOfOrders, AverageOrderValue)
+5) The Database Initialization is not working from my system and I have wrote the logic for the above
+6) Database Design 
+
+ Table Name : orders
+- **Order ID:** (Unique identifier) - Primary key 
+- **Product ID:** (Unique identifier) - Text
+- **Customer ID:** (Unique identifier) - Text
+- **Product Name:** - Text
+- **Category:** - Text
+- **Region:** - Text
+- **Date of Sale:** - Date
+- **Quantity Sold:** - Decimal
+- **Unit Price:** - Decimal
+- **Discount:** - Decimal
+- **Shipping Cost:** - Decimal
+- **Payment Method:** - Text
+- **Customer Name:**- Text
+- **Customer Email:**- Text
+- **Customer Address:**- Text
